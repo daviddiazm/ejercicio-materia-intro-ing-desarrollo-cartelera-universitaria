@@ -52,6 +52,8 @@ export default function Page() {
     let active = true
     async function loadEvents() {
       if (!supabase) { setLoading(false); return }
+
+      console.log(supabase);
       // const { data, error } = await supabase.from('event').select('*').eq('estado', 'aprobado').order('fecha_evento', { ascending: true })
       const { data, error } = await supabase.from('event').select('*')
 
