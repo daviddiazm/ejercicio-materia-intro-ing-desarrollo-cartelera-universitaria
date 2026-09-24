@@ -9,16 +9,16 @@ export const supabase = supabaseUrl && supabaseAnonKey
 
 export type Evento = {
   id: string
-  titulo: string
-  descripcion: string | null
-  categoria: string
-  fecha_evento: string
-  lugar: string | null
-  es_virtual: boolean | null
+  title: string
+  description: string | null
+  category: string
+  event_date: string
+  site: string | null
+  is_virtual: boolean | null
   link_virtual: string | null
-  afiche_url: string | null
-  cupos_maximos: number | null
-  estado: 'pendiente' | 'aprobado' | 'rechazado'
+  post_img_url: string | null
+  max_capacity: number | null
+  state: 'pendiente' | 'aprobado' | 'rechazado'
   organizador_id: string | null
 }
 
