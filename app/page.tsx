@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { supabase, type Evento, categories, categoryStyles } from '@/lib/supabase'
 import { Bell, CalendarDays, ChevronRight, Clock3, MapPin, Search, Sparkles, UserRound } from 'lucide-react'
 import EventCard from '../components/EventCard';
+import SearchEvents from '@/components/SearchEvents';
 
 
 export default function Page() {
@@ -52,10 +53,14 @@ export default function Page() {
           <h1 className="text-4xl font-black tracking-tight text-slate-950 sm:text-5xl lg:text-6xl">Encuentra tu próxima <span className="text-blue-600">gran experiencia.</span></h1>
           <p className="mt-5 max-w-2xl text-base leading-7 text-slate-600 sm:text-lg">Eventos, convocatorias y oportunidades seleccionadas para que vivas la universidad al máximo.</p>
         </div>
-        <div className="mt-9 flex max-w-3xl flex-col gap-3 sm:flex-row">
+
+
+        {/* <div className="mt-9 flex max-w-3xl flex-col gap-3 sm:flex-row">
           <label className="relative flex-1"><Search className="absolute left-4 top-1/2 size-5 -translate-y-1/2 text-slate-400" aria-hidden="true" /><span className="sr-only">Buscar eventos</span><input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Buscar por nombre o palabra clave..." className="h-12 w-full rounded-xl border border-slate-200 bg-white pl-12 pr-4 text-sm outline-none ring-blue-500 transition placeholder:text-slate-400 focus:ring-2" /></label>
           <button className="flex h-12 items-center justify-center gap-2 rounded-xl bg-blue-600 px-5 text-sm font-bold text-white shadow-lg shadow-blue-600/20 hover:bg-blue-700"><Search className="size-4" aria-hidden="true" /> Buscar</button>
-        </div>
+        </div> */}
+
+        <SearchEvents query={query} setQuery={setQuery} />
       </section>
 
       <section id="eventos" className="mx-auto max-w-7xl px-5 pb-20 lg:px-8">
